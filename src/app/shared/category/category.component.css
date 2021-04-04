@@ -1,0 +1,13 @@
+.category {
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid lightblue;
+  }
+
+  .highlight{
+      background: red;
+  }

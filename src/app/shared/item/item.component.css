@@ -1,0 +1,32 @@
+.item {
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightblue;
+  }
+
+  .card{  
+    padding: 2rem;    
+    border-radius: 20px;
+  }
+
+  .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .item .header{
+    font-size: large;
+    font-weight: bold;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .item .ctnr{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 10px;
+}

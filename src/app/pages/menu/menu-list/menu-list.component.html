@@ -1,0 +1,14 @@
+<div class="menu">
+  <div class="categories">
+    <div class="header">Categories</div>
+    <div *ngFor="let item of menu | async | keyvalue">
+      <app-category [category]="item.key" [count]="item.value.length" (onCatSelect)="catSelect($event)" [highlight]="selectedCat === item.key ? true : false"></app-category>
+    </div>
+
+  </div>
+  <div class="items">
+    <div *ngFor="let obj of selected">
+      <app-item [item]="obj"></app-item>
+    </div>
+  </div>
+</div>   

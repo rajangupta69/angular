@@ -1,0 +1,57 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <table>
+    <tr>
+      <td>
+        Category*: </td>
+      <td><input id="category" name="category" type="text" formControlName="category" required></td>
+    </tr>
+    <tr>
+      <td>
+        <span style="color:red" *ngIf="category?.invalid && (category?.dirty || category?.touched)">
+          <span *ngIf="category?.errors?.required">
+            Category is required.
+          </span>
+        </span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Name*:</td>
+      <td><input type="text" formControlName="name" required>
+      </td>
+      <td>
+        <span style="color:red" *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+
+          <span *ngIf="name?.errors?.required">
+            Name is required.
+          </span>
+
+        </span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Price:</td>
+      <td><input type="number" formControlName="price">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Orders:</td>
+      <td><input type="number" formControlName="orders">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Revenue:</td>
+      <td><input type="number" formControlName="revenue">
+      </td>
+    </tr>
+  </table>
+
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>

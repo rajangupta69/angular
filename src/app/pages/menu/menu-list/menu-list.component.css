@@ -1,0 +1,23 @@
+.menu{
+    display: grid;
+    grid-template-columns: 15% auto;
+}
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+}
+
+.items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.categories .header{
+    font-size: large;
+    font-weight: bold;
+    margin: 20px 0px 10px 20px;
+}
